@@ -1,4 +1,5 @@
 import setuptools
+import subprocess
 import pathlib
 import pkg_resources
 from glob import glob
