@@ -3,6 +3,14 @@ import pathlib
 import pkg_resources
 from glob import glob
 
+version = (
+    subprocess.run(["git", "describe", "--tags"], stdout=subprocess.PIPE)
+    .stdout.decode("utf-8")
+    .strip()
+)
+assert "." in version
+
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -15,7 +23,7 @@ with pathlib.Path('requirements.txt').open() as requirements_txt:
 
 setuptools.setup(
     name="github-workflows",
-    version="0.2",
+    version=version,
     author="Pankaj Rawat",
     author_email="pankajr141@gmail.com",
     description="Contains CI CD workflows examples in github",
