@@ -15,7 +15,7 @@ with pathlib.Path('requirements.txt').open() as requirements_txt:
 
 setuptools.setup(
     name="github-workflows",
-    version="0.1",
+    version="0.2",
     author="Pankaj Rawat",
     author_email="pankajr141@gmail.com",
     description="Contains CI CD workflows examples in github",
